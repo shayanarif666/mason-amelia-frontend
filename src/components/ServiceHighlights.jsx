@@ -11,10 +11,10 @@ const ServiceHighlights = ({
 }) => {
   return (
     <>
-      <section className=" py-20 bg-[#fff] relative z-[10] parallax-bg">
+      <section className="py-20 bg-[#fff] relative z-[10] parallax-bg">
         <div className="container px-5">
           {/* Section Title */}
-          <div className="w-full mb-20 px-4 flex flex-col md:flex-row justify-between items-center z-[4]">
+          <div className="w-full mb-10 md:mb-20 px-4 flex flex-col md:flex-row justify-between items-center z-[4]">
             <div className="flex flex-col items-center jsutify-center mx-auto">
               <motion.h2
                 initial={{ opacity: 0, y: 100 }}

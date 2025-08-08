@@ -2,12 +2,14 @@ import React from "react";
 import Navbar from "./Navbar";
 import BlurText from "./ui/BlurText";
 import ShinyText from "./ui/ShinyText";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const Banner = ({ url }) => {
+  const media = useMediaQuery("(max-width: 767px)");
   return (
     <>
       <div
-        className="bg-img w-full h-full md:h-screen relative z-[1]"
+        className="bg-img w-full h-screen relative z-[1]"
         style={{
           backgroundImage: `linear-gradient(to right, #15161c 20%, rgba(0, 0, 0, 0.05)), url(${url})`,
           backgroundSize: "cover",
@@ -30,8 +32,9 @@ const Banner = ({ url }) => {
             <ShinyText
               text="Experience the unmatched thrill of aviation like never before. Feel the power, precision, and freedom as you conquer the skies."
               disabled={false}
+              isTextCenter={media ? true : false}
               speed={5}
-              className="custom-class text-[16px] md:text-xl mt-4 max-w-2xl text-start"
+              className="custom-class text-[16px] md:text-xl mt-4 md:max-w-2xl"
             />
           </div>
         </div>

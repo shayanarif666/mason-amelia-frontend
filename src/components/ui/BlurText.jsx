@@ -81,7 +81,7 @@ const BlurText = ({
   return (
     <p
       ref={ref}
-      className={`blur-text ${className} flex flex-wrap`}
+      className={`blur-text ${className} flex flex-wrap md:justify-start justify-center`}
     >
       {elements.map((segment, index) => {
         const animateKeyframes = buildKeyframes(fromSnapshot, toSnapshots);

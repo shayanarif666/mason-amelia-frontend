@@ -15,6 +15,7 @@ import planeSeven from "/images/planes/plane (5).avif";
 import planeEight from "/images/planes/plane (6).avif";
 import planeNine from "/images/planes/plane (7).avif";
 import planeTen from "/images/planes/plane (8).avif";
+import { IoFilterSharp } from "react-icons/io5";
 
 // Must match FilterCheckboxList
 const AIRFRAME_OPTIONS = ["2500", "5000", "7500"];
@@ -26,7 +27,8 @@ const airplanes = [
     _id: "94827342a",
     aircraft: "cirrus",
     title: "Gulfstream G600",
-    description: "Long-range business jet with advanced avionics and luxury interior.",
+    description:
+      "Long-range business jet with advanced avionics and luxury interior.",
     image: planeOne,
     price: 58000000,
     airframe: "2500",
@@ -38,7 +40,8 @@ const airplanes = [
     _id: "dafda4353",
     aircraft: "cessna",
     title: "Pilatus PC-24",
-    description: "Versatile light jet designed for short runways and global travel.",
+    description:
+      "Versatile light jet designed for short runways and global travel.",
     image: planeTwo,
     price: 11200000,
     airframe: "2500",
@@ -50,7 +53,8 @@ const airplanes = [
     _id: "948affad23",
     aircraft: "dassault",
     title: "Dassault Falcon 8X",
-    description: "Ultra-long-range trijet offering unmatched comfort and range.",
+    description:
+      "Ultra-long-range trijet offering unmatched comfort and range.",
     image: planeThree,
     price: 62000000,
     airframe: "2500",
@@ -62,7 +66,8 @@ const airplanes = [
     _id: "aasfa241",
     aircraft: "piper",
     title: "Cessna Citation Latitude",
-    description: "Mid-size business jet combining performance with spacious comfort.",
+    description:
+      "Mid-size business jet combining performance with spacious comfort.",
     image: planeFour,
     price: 18500000,
     airframe: "2500",
@@ -74,7 +79,8 @@ const airplanes = [
     _id: "fada2341",
     aircraft: "tbm",
     title: "Embraer Legacy 500",
-    description: "Mid-size luxury jet offering fly-by-wire technology and range efficiency.",
+    description:
+      "Mid-size luxury jet offering fly-by-wire technology and range efficiency.",
     image: planeFive,
     price: 20500000,
     airframe: "2500",
@@ -86,7 +92,8 @@ const airplanes = [
     _id: "342561",
     aircraft: "tbm",
     title: "Bombardier Global 7500",
-    description: "Flagship ultra-long-range jet with exceptional speed and luxury.",
+    description:
+      "Flagship ultra-long-range jet with exceptional speed and luxury.",
     image: planeSix,
     price: 75000000,
     airframe: "5000",
@@ -98,7 +105,8 @@ const airplanes = [
     _id: "252571",
     aircraft: "piper",
     title: "HondaJet Elite",
-    description: "Compact business jet with innovative over-the-wing engine design.",
+    description:
+      "Compact business jet with innovative over-the-wing engine design.",
     image: planeSeven,
     price: 7000000,
     airframe: "2500",
@@ -110,7 +118,8 @@ const airplanes = [
     _id: "adad24134",
     aircraft: "cessna",
     title: "Cessna Citation CJ4 Gen2",
-    description: "Light jet with upgraded cabin comfort and strong runway performance.",
+    description:
+      "Light jet with upgraded cabin comfort and strong runway performance.",
     image: planeEight,
     price: 10500000,
     airframe: "2500",
@@ -122,7 +131,8 @@ const airplanes = [
     _id: "24342342",
     aircraft: "cirrus",
     title: "Beechcraft King Air 260",
-    description: "Twin-turboprop aircraft with advanced cockpit and reliability.",
+    description:
+      "Twin-turboprop aircraft with advanced cockpit and reliability.",
     image: planeNine,
     price: 7200000,
     airframe: "5000",
@@ -134,7 +144,8 @@ const airplanes = [
     _id: "25545426",
     aircraft: "cirrus",
     title: "Cirrus Vision Jet G2+",
-    description: "Single-engine personal jet with modern design and versatility.",
+    description:
+      "Single-engine personal jet with modern design and versatility.",
     image: planeTen,
     price: 3450000,
     airframe: "5000",
@@ -231,7 +242,8 @@ export default function Listing() {
         </div>
 
         <div className="filter mb-4 lg:hidden flex justify-end">
-          <button onClick={() => setIsOpen(!isOpen)} className="text-white">
+          <button onClick={() => setIsOpen(!isOpen)} className="text-white flex items-center gap-2">
+            <IoFilterSharp />
             Filter
           </button>
         </div>
@@ -239,31 +251,31 @@ export default function Listing() {
         <div className="flex">
           {filterOpen && (
             <motion.aside
-            key="filter"
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "100%", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.4 }}
-            className="hidden lg:block overflow-hidden pe-4"
-          >
-            <motion.div
-              layout
-              initial={{ height: 0 }}
-              animate={{ height: "auto" }}
-              exit={{ height: 0 }}
+              key="filter"
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: "100%", opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
               transition={{ duration: 0.4 }}
-              className="rounded-2xl border border-[#ffffff48] p-0 bg-transparent"
+              className="hidden lg:block overflow-hidden pe-4"
             >
-              <FilterCheckboxList
-                selected={selectedFilters}
-                setSelected={setSelectedFilters}
-                range={priceRange}
-                setRange={setPriceRange}
-                minPrice={minPrice}
-                maxPrice={maxPrice}
-              />
-            </motion.div>
-          </motion.aside>
+              <motion.div
+                layout
+                initial={{ height: 0 }}
+                animate={{ height: "auto" }}
+                exit={{ height: 0 }}
+                transition={{ duration: 0.4 }}
+                className="rounded-2xl border border-[#ffffff48] p-0 bg-transparent"
+              >
+                <FilterCheckboxList
+                  selected={selectedFilters}
+                  setSelected={setSelectedFilters}
+                  range={priceRange}
+                  setRange={setPriceRange}
+                  minPrice={minPrice}
+                  maxPrice={maxPrice}
+                />
+              </motion.div>
+            </motion.aside>
           )}
 
           <div className="block">
