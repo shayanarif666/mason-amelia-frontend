@@ -242,8 +242,8 @@ export default function Listing() {
         </div>
 
         <div className="filter mb-4 lg:hidden flex justify-end">
+          <IoFilterSharp />
           <button onClick={() => setIsOpen(!isOpen)} className="text-white flex items-center gap-2">
-            <IoFilterSharp />
             Filter
           </button>
         </div>
