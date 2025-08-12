@@ -40,13 +40,13 @@ const GlowingCardSection = () => {
     >
       <div className="absolute top-0 left-0 w-full h-full bg-black opacity-70 z-[-1]"></div>
       <div className="container mx-auto px-4 gap-8">
-        <div className="w-full mb-20 px-4 flex flex-col md:flex-row justify-between items-center z-[4]">
+        <div className="w-full px-4 flex flex-col md:flex-row justify-between items-center z-[4]">
           <div className="flex flex-col items-center jsutify-center mx-auto">
             <motion.h2
               initial={{ opacity: 0, y: 80 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-4xl xl:text-6xl font-bold text-white mb-4 text-center max-w-4xl"
+              className="text-4xl xl:text-6xl font-bold text-white text-center max-w-4xl"
               style={{ lineHeight: "1.1" }}
             >
               Aviation Marketing with {" "}
@@ -58,7 +58,7 @@ const GlowingCardSection = () => {
               initial={{ opacity: 0, y: 80 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.5 }}
-              className="text-white md:text-lg font-light ms-4 text-center max-w-5xl"
+              className="text-white py-[40px] md:text-lg font-light ms-4 text-center max-w-5xl"
             >
               We blend the emotional power of storytelling with the accuracy of
               data-driven strategy. Every aircraft we market is positioned not

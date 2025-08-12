@@ -158,7 +158,7 @@ const TeamSection = () => {
                   initial={{ opacity: 0, y: 100 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.4 }}
-                  className="text-base xl:text-xl text-center max-w-2xl mt-4 font-light"
+                  className="text-base xl:text-xl text-center max-w-2xl mt-[30px] font-light"
                 >
                   Built by aviators with decades of insight, Mason Amelia
                   delivers unmatched clarity, strategy, and confidence in every

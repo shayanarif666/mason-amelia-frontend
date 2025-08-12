@@ -84,7 +84,7 @@ export default function WhatSetsUsApart() {
     <section className="w-full flex justify-center items-center py-20 relative bg-[#111218]">
       <div className="container px-5">
         <div className="rounded-2xl py-8 w-full">
-          <div className="w-full mb-20 px-4 flex flex-col justify-center text-center items-center">
+          <div className="w-full mb-[60px] px-4 flex flex-col justify-center text-center items-center">
             {/* Left Side: Headline */}
 
             <motion.div
@@ -103,7 +103,7 @@ export default function WhatSetsUsApart() {
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="text-[1.6rem] md:text-[2.5rem] lg:text-[3rem] xl:text-6xl font-bold text-white mb-4 md:max-w-3xl"
+              className="text-[1.6rem] md:text-[2.5rem] lg:text-[3rem] xl:text-6xl font-bold text-white md:max-w-3xl"
               style={{ lineHeight: "1.2" }}
             >
               Mason Amelia Leads with{" "}
@@ -118,7 +118,7 @@ export default function WhatSetsUsApart() {
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
-              className="text-sm md:text-lg text-neutral-300 mb-8 max-w-4xl"
+              className="text-sm md:text-lg text-neutral-300 py-[40px] max-w-4xl"
             >
               As aviation specialists driven by trust and experience, we deliver
               truly personalized service for every client and every mission.

@@ -64,7 +64,7 @@ function WhyChoosUs() {
   return (
     <section id="why-choosen" className="py-20">
       <div className="container">
-        <div className="w-full mb-20 px-4 flex flex-col justify-center text-center items-center">
+        <div className="w-full px-4 flex flex-col justify-center text-center items-center">
           {/* Left Side: Headline */}
 
           <motion.div
@@ -87,7 +87,7 @@ function WhyChoosUs() {
             }}
             whileInView={{ opacity: 1, y: 0, x: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="text-[2rem] md:text-[2.5rem] lg:text-4xl xl:text-5xl font-bold text-white mb-4 max-w-3xl"
+            className="text-[2rem] md:text-[2.5rem] lg:text-4xl xl:text-5xl font-bold text-white max-w-3xl"
             style={{ lineHeight: "1.2" }}
           >
             Aviation Expertise Fueled by{" "}
@@ -106,7 +106,7 @@ function WhyChoosUs() {
             }}
             whileInView={{ opacity: 1, y: 0, x: 0 }}
             transition={{ duration: 0.5, delay: 0.6 }}
-            className="md:text-lg text-neutral-300 mb-8 max-w-4xl"
+            className="md:text-lg text-neutral-300 py-[40px] max-w-4xl"
           >
             At Mason Amelia, you’ll find a brokerage built on trust, expertise,
             and genuine personal commitment. Our boutique approach means you’re
