@@ -11,10 +11,11 @@ const Banner = ({ url }) => {
       <div
         className="bg-img w-full h-screen relative z-[1]"
         style={{
-          backgroundImage: `linear-gradient(to right, #15161c 20%, rgba(0, 0, 0, 0.05)), url(${url})`,
+          backgroundImage: `linear-gradient(to right,rgb(21, 22, 28, ${media ? ".8" : "1"}) ${media? "100%" : "20%"}, rgba(0, 0, 0, 0.05)), url(${url})`,
           backgroundSize: "cover",
           backgroundAttachment: "fixed",
           backgroundRepeat: "no-repeat",
+          backgroundPosition: "center"
         }}
       >
         <div className="overlay bg-black opacity-60 absolute top-0 left-0 w-full h-full z-[-1]"></div>

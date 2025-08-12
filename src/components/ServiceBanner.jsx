@@ -15,7 +15,7 @@ const ServiceBanner = ({ banner }) => {
       <section
         className="w-screen h-[100vh] md:sticky top-0 "
         style={{
-          backgroundImage: `linear-gradient(to right, #15161c 40%, rgba(21, 22, 28,0.3)), url(${
+          backgroundImage: `linear-gradient(to right, rgb(21, 22, 28, ${media ? ".95" : "1"}) ${media? "100%" : "40%"}, rgba(21, 22, 28,0.3)), url(${
             location.pathname === "/brokerage"
               ? banner
               : banner

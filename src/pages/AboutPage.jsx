@@ -11,6 +11,7 @@ import { IoCheckmarkDoneSharp } from "react-icons/io5";
 import WhatSetsUsApart from "../components/WhatSetsApart";
 import aboutBanner from "/images/about/banner.avif";
 import WhyChoosUs from "../components/WhyChoosUs";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const AboutPage = () => {
 
@@ -99,12 +100,14 @@ const AboutPage = () => {
     },
   ];
 
+  const media = useMediaQuery("(max-width: 767px)");
+
   return (
     <>
       <section
         className="relative w-screen h-screen bg-[#10121A]"
         style={{
-          backgroundImage: `linear-gradient(to right, #15161c 30%, rgba(0, 0, 0,0.3)), url(${bgPlane})`,
+          backgroundImage: `linear-gradient(to right, rgb(21, 22, 28, ${media ? ".95" : "1"}) ${media? "100%" : "30%"}, rgba(0, 0, 0,0.3)), url(${bgPlane})`,
           backgroundSize: "cover", // <--- THIS
           backgroundPosition: "30% 85%",
           backgroundRepeat: "no-repeat",
