@@ -465,8 +465,8 @@ const SkynetTimeline = () => {
   }, []);
 
   return (
-    <section className="pt-20 bg-white">
-      <div className="container px-5 pb-20">
+    <section className="pt-20 bg-white relative z-0">
+      <div className="container px-5">
         <motion.h2
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -482,7 +482,7 @@ const SkynetTimeline = () => {
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="text-center text-[#222] mb-10 md:text-lg mt-4 max-w-6xl mx-auto"
+          className="text-center text-[#222] mb-10 md:text-lg pt-[40px] max-w-6xl mx-auto"
         >
           From pioneering data access to deploying proprietary AI-powered
           analytics, Mason Amelia has consistently led the aircraft pricing

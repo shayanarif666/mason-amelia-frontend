@@ -14,13 +14,13 @@ const ServiceHighlights = ({
       <section className="py-20 bg-[#fff] relative z-[10] parallax-bg">
         <div className="container px-5">
           {/* Section Title */}
-          <div className="w-full mb-10 md:mb-20 px-4 flex flex-col md:flex-row justify-between items-center z-[4]">
+          <div className="w-full md:mb-0 px-4 flex flex-col md:flex-row justify-between items-center z-[4]">
             <div className="flex flex-col items-center jsutify-center mx-auto">
               <motion.h2
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="text-[1.6rem] md:text-[2.5rem] lg:text-[3rem] xl:text-6xl font-bold text-[#222] mb-4 text-center max-w-4xl"
+                className="text-[1.6rem] md:text-[2.5rem] lg:text-[3rem] xl:text-6xl font-bold text-[#222] text-center max-w-4xl"
                 style={{ lineHeight: "1.1" }}
               >
                 {topTitle}{" "}
@@ -33,7 +33,7 @@ const ServiceHighlights = ({
                 initial={{ opacity: 0, y: 70 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
-                className="text-[#222] text-sm md:text-lg xl:text-xl font-light ms-4 text-center max-w-5xl"
+                className="text-[#222] text-sm md:text-lg xl:text-xl font-light ms-4 py-[40px] text-center max-w-5xl"
               >
                 {description}
               </motion.p>

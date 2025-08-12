@@ -63,7 +63,7 @@ export const Timeline = ({
             y: 0,
           }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-white text-base md:text-xl max-w-4xl mx-auto"
+          className="text-white text-base md:text-xl max-w-4xl mx-auto pt-[40px] pb-[80px]"
         >
           Discover the pivotal moments that have defined Mason Amelia’s
           evolution—from our entrepreneurial roots to becoming one of America’s
@@ -71,11 +71,11 @@ export const Timeline = ({
           forward in our commitment to excellence, innovation, and client trust.
         </motion.p>
       </div>
-      <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
+      <div ref={ref} className="relative max-w-7xl mx-auto">
         {data.map((item, index) => (
           <div
             key={index}
-            className="flex justify-start pt-10 md:pt-40 md:gap-10"
+            className="flex justify-start md:gap-10 pb-28"
           >
             <div
               className={`sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs  md:w-full ${

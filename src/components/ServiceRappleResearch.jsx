@@ -22,12 +22,12 @@ const ServiceRappleResearch = ({
       >
         <div className="overlay bg-[#111218df] opacity-[.97] absolute top-0 left-0 w-full h-full z-[-1]" />
         <div className="container px-5 flex flex-col justify-center h-full">
-          <div className="w-full mb-20 px-4 flex flex-col justify-between items-center text-center z-[4]">
+          <div className="w-full px-4 flex flex-col justify-between items-center text-center z-[4]">
             <motion.h2
               initial={{ opacity: 0, y: 100 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-[1.6rem] md:text-[2.5rem] lg:text-[3rem] xl:text-6xl font-bold text-white mb-4 max-w-4xl mx-auto"
+              className="text-[1.6rem] md:text-[2.5rem] lg:text-[3rem] xl:text-6xl font-bold text-white max-w-4xl mx-auto"
               style={{ lineHeight: "1.1" }}
             >
               <span className="bg-gradient-to-r from-[#1777cb] to-tertiary_color bg-clip-text text-transparent">
@@ -39,7 +39,7 @@ const ServiceRappleResearch = ({
               initial={{ opacity: 0, y: 70 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-[#fff] text-sm md:text-lg xl:text-xl font-light max-w-5xl mx-auto"
+              className="text-[#fff] py-[40px] text-sm md:text-lg xl:text-xl font-light max-w-5xl mx-auto"
             >
               {description}
             </motion.p>
@@ -62,7 +62,7 @@ const ServiceRappleResearch = ({
                   <h4 className="text-[1.4rem] font-semibold text-white pt-8">
                     {item.title}
                   </h4>
-                  <p className="text-sm text-white/80">{item.description}</p>
+                  <p className="text-base text-white/80">{item.description}</p>
                 </div>
               </motion.div>
             ))}

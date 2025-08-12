@@ -1,6 +1,7 @@
 import React from "react";
 import InfiniteMovingCards from "../components/ui/infinite-moving-cards";
 import { motion } from "framer-motion";
+import { useLocation } from "react-router-dom";
 
 const testimonials = [
   {
@@ -62,11 +63,14 @@ const testimonials = [
 ];
 
 const Reviews = () => {
+
+  const location = useLocation();
+
   return (
     <>
-      <section id="testimonials" className="py-10 xl:h-[90vh] flex flex-col justify-center">
+      <section id="testimonials" className={`py-10 ${location.pathname === "/testimonial" ? "xl:h-[90vh]" : "xl:h-[100vh]"}  flex flex-col justify-center`}>
         <div className="container px-5 mb-14 z-[20]">
-          <div className="text-center mb-4">
+          <div className="text-center">
             <motion.h5
               initial={{ opacity: 0, y: 80 }}
               animate={{ opacity: 1, y: 0 }}
@@ -79,7 +83,7 @@ const Reviews = () => {
               initial={{ opacity: 0, y: 80 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.5 }}
-              className="text-[#fff] md:text-lg mt-3 mx-auto max-w-4xl"
+              className="text-[#ddd] md:text-lg py-[40px] mx-auto max-w-4xl"
             >
               Real voices. Real experiences. Hear how our clients turned
               aviation dreams into reality with Mason Amelia. From first-time

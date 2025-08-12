@@ -31,7 +31,7 @@ const Brands = () => {
   });
 
   return (
-    <section className="w-full overflow-x-hidden py-4">
+    <section className="w-full overflow-x-hidden bg-[#111218] py-4">
       <div
         className="w-max flex"
         ref={containerRef}

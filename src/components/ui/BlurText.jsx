@@ -30,6 +30,7 @@ const BlurText = ({
   stepDuration = 0.35,
 }) => {
   const elements = animateBy === 'words' ? text.split(' ') : text.split('');
+  const highlightedElements = highlightedText.split(' ');
   const [inView, setInView] = useState(false);
   const ref = useRef(null);
 
@@ -96,6 +97,32 @@ const BlurText = ({
         return (
           <motion.span
             className="inline-block will-change-[transform,filter,opacity]"
+            key={index}
+            initial={fromSnapshot}
+            animate={inView ? animateKeyframes : fromSnapshot}
+            transition={spanTransition}
+            onAnimationComplete={
+              index === elements.length - 1 ? onAnimationComplete : undefined
+            }
+          >
+            {segment === ' ' ? '\u00A0' : segment}
+            {animateBy === 'words' && index < elements.length - 1 && '\u00A0'}
+          </motion.span>
+        );
+      })}
+      {highlightedElements.map((segment, index) => {
+        const animateKeyframes = buildKeyframes(fromSnapshot, toSnapshots);
+
+        const spanTransition = {
+          duration: totalDuration,
+          times,
+          delay: (index * delay) / 500,
+        };
+        (spanTransition).ease = easing;
+
+        return (
+          <motion.span
+            className={`${index === 2 && "me-3"} text-tertiary_color inline-block will-change-[transform,filter,opacity]`}
             key={index}
             initial={fromSnapshot}
             animate={inView ? animateKeyframes : fromSnapshot}

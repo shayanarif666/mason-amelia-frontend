@@ -112,14 +112,14 @@ const GlassNavbar = () => {
                     Contact
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link
                     to="/blogs"
                     className="uppercase text-[.7rem] xl:text-[.8rem] 2xl:text-[.9rem] font-semibold transition hover:text-tertiary_color"
                   >
                     Blogs
                   </Link>
-                </li>
+                </li> */}
               </ul>
             </nav>
           </div>

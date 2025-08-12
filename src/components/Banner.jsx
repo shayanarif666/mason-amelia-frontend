@@ -9,22 +9,28 @@ const Banner = ({ url }) => {
   return (
     <>
       <div
-        className="bg-img w-full h-screen relative z-[1]"
+        className="bg-img w-full md:sticky top-0 h-screen"
         style={{
-          backgroundImage: `linear-gradient(to right,rgb(21, 22, 28, ${media ? ".8" : "1"}) ${media? "100%" : "20%"}, rgba(0, 0, 0, 0.05)), url(${url})`,
+          backgroundImage: `linear-gradient(to right,rgb(21, 22, 28, ${
+            media ? ".8" : "1"
+          }) ${media ? "100%" : "20%"}, rgba(0, 0, 0, 0.05)), url(${url})`,
           backgroundSize: "cover",
           backgroundAttachment: "fixed",
           backgroundRepeat: "no-repeat",
-          backgroundPosition: "center"
+          backgroundPosition: "center",
         }}
       >
         <div className="overlay bg-black opacity-60 absolute top-0 left-0 w-full h-full z-[-1]"></div>
+
         <Navbar />
+
         <div className="container flex flex-col justify-center h-full md:items-start items-center px-5">
           <div className="banner-content -mt-[10vh]">
             {/* <h1 className="text-white text-6xl font-bold">Discover the Future of Flight</h1> */}
             <BlurText
-              text="Discover the Future of Flight"
+              text="Discover the"
+              highlightedText=" Future of Flight"
+              highlightedClassName="text-blue-500" // ya sky-500, etc.
               delay={150}
               animateBy="words"
               direction="top"

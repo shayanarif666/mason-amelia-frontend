@@ -176,7 +176,7 @@ export default function Listing() {
   const maxPrice = Math.max(...allPrices);
   const [priceRange, setPriceRange] = useState([minPrice, maxPrice]);
 
-  const [filterOpen, setFilterOpen] = useState(true);
+  const [filterOpen, setFilterOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
   // Smoother UI during filter changes
@@ -217,7 +217,7 @@ export default function Listing() {
   useEffect(() => setCurrentPage(1), [selectedFilters, priceRange, activeTab]);
 
   return (
-    <section id="showroom">
+    <section id="showroom" className="bg-[#111218] relative z-[10]">
       <div className="container px-6">
         <div className="text-center mb-20">
           <h1 className="text-4xl font-bold text-white pt-10">
@@ -256,7 +256,7 @@ export default function Listing() {
               animate={{ height: "100%", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
               transition={{ duration: 0.4 }}
-              className="hidden lg:block overflow-hidden pe-4"
+              className="hidden lg:block overflow-hidden pe-4 w-[25%]"
             >
               <motion.div
                 layout
@@ -296,7 +296,7 @@ export default function Listing() {
             layout
             transition={{ duration: 0.2 }}
             className={`w-full ${
-              filterOpen ? "lg:w-[75%] lg:ms-[5%]" : "lg:w-full lg:ms-0"
+              filterOpen ? "lg:w-[70%] lg:ms-[5%]" : "lg:w-full lg:ms-0"
             }`}
           >
             {paginatedAirplanes.length === 0 ? (

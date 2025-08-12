@@ -19,7 +19,7 @@ const TeamPage = () => {
 
         <Team />
       </section>
-      <div className="container px-5">
+      <div className="container px-5 py-10">
         <CTABanner />
       </div>
       <Contact />

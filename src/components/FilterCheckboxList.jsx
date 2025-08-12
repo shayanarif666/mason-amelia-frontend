@@ -155,7 +155,6 @@
 // //   );
 // // }
 
-
 // // FilterCheckboxList.jsx
 // import React, { useMemo, useState, useEffect } from "react";
 // import Slider from "react-slider";
@@ -501,10 +500,6 @@
 //   );
 // }
 
-
-
-
-
 // FilterCheckboxList.jsx
 import React, { useMemo, useState, useEffect, useRef } from "react";
 import Slider from "react-slider";
@@ -512,7 +507,7 @@ import CheckBoxGroup from "./CheckBoxGroup";
 
 // Discrete sliders (order matters)
 const AIRFRAME_OPTIONS = ["2500", "5000", "7500"];
-const ENGINE_OPTIONS   = ["2665", "3517/3421", "220", "3710", "380/380"];
+const ENGINE_OPTIONS = ["2665", "3517/3421", "220", "3710", "380/380"];
 const AIRCRAFT_OPTIONS = ["cirrus", "cessna", "piper", "tbm"];
 
 // Tiny debounce helper
@@ -535,22 +530,28 @@ export default function FilterCheckboxList({
   const stripGroup = (prev, group) => prev.filter((x) => !group.includes(x));
 
   const defaultAirframe = [0, AIRFRAME_OPTIONS.length - 1];
-  const defaultEngine   = [0, ENGINE_OPTIONS.length - 1];
+  const defaultEngine = [0, ENGINE_OPTIONS.length - 1];
 
   const initialAirframe = useMemo(() => {
-    const picked = AIRFRAME_OPTIONS.map((v, i) => (selected.includes(v) ? i : null))
-      .filter((i) => i !== null);
-    return picked.length ? [Math.min(...picked), Math.max(...picked)] : defaultAirframe;
+    const picked = AIRFRAME_OPTIONS.map((v, i) =>
+      selected.includes(v) ? i : null
+    ).filter((i) => i !== null);
+    return picked.length
+      ? [Math.min(...picked), Math.max(...picked)]
+      : defaultAirframe;
   }, [selected]);
 
   const initialEngine = useMemo(() => {
-    const picked = ENGINE_OPTIONS.map((v, i) => (selected.includes(v) ? i : null))
-      .filter((i) => i !== null);
-    return picked.length ? [Math.min(...picked), Math.max(...picked)] : defaultEngine;
+    const picked = ENGINE_OPTIONS.map((v, i) =>
+      selected.includes(v) ? i : null
+    ).filter((i) => i !== null);
+    return picked.length
+      ? [Math.min(...picked), Math.max(...picked)]
+      : defaultEngine;
   }, [selected]);
 
   const [airframeIdx, setAirframeIdx] = useState(initialAirframe);
-  const [engineIdx, setEngineIdx]     = useState(initialEngine);
+  const [engineIdx, setEngineIdx] = useState(initialEngine);
 
   useEffect(() => setAirframeIdx(initialAirframe), [initialAirframe]);
   useEffect(() => setEngineIdx(initialEngine), [initialEngine]);
@@ -581,7 +582,8 @@ export default function FilterCheckboxList({
     );
   };
 
-  const safeRange = Array.isArray(range) && range.length === 2 ? range : [minPrice, maxPrice];
+  const safeRange =
+    Array.isArray(range) && range.length === 2 ? range : [minPrice, maxPrice];
   const debouncedSetRange = useDebouncedCallback(setRange, 120);
 
   const clearAll = () => {
@@ -601,7 +603,10 @@ export default function FilterCheckboxList({
     <div className="p-6 rounded-2xl border border-[#ffffff48]">
       <div className="flex justify-between mb-4">
         <h3 className="text-white font-medium">Filter Options</h3>
-        <button onClick={clearAll} className="text-white font-medium text-xs hover:text-tertiary_color">
+        <button
+          onClick={clearAll}
+          className="text-white font-medium text-xs hover:text-tertiary_color"
+        >
           Clear All
         </button>
       </div>
@@ -625,14 +630,23 @@ export default function FilterCheckboxList({
           value={airframeIdx}
           onChange={onAirframeChange}
           renderTrack={(props, state) => (
-            <div {...props} className={`slider-track ${state.index === 0 ? "track-0" : "track-1"}`} />
+            <div
+              {...props}
+              className={`slider-track ${
+                state.index === 0 ? "track-0" : "track-1"
+              }`}
+            />
           )}
-          renderThumb={(props) => <div {...props} className="slider-thumb relative" />}
+          renderThumb={(props) => (
+            <div {...props} className="slider-thumb relative" />
+          )}
         />
         <div className="flex justify-between mt-3 text-[.6rem] xl:text-base text-gray-300">
-          {AIRFRAME_OPTIONS.map((lab) => (
+          {/* {AIRFRAME_OPTIONS.map((lab) => (
             <span key={lab}>{lab}</span>
-          ))}
+          ))} */}
+          <span className="text-[.6rem] xl:text-xs font-bold">Min: 2500</span>
+          <span className="text-[.6rem] xl:text-xs font-bold">Max: 7500</span>
         </div>
       </div>
 
@@ -647,25 +661,33 @@ export default function FilterCheckboxList({
           value={engineIdx}
           onChange={onEngineChange}
           renderTrack={(props, state) => (
-            <div {...props} className={`slider-track ${state.index === 0 ? "track-0" : "track-1"}`} />
+            <div
+              {...props}
+              className={`slider-track ${
+                state.index === 0 ? "track-0" : "track-1"
+              }`}
+            />
           )}
-          renderThumb={(props) => <div {...props} className="slider-thumb relative" />}
+          renderThumb={(props) => (
+            <div {...props} className="slider-thumb relative" />
+          )}
         />
         <div className="flex justify-between mt-3 text-gray-300">
           {ENGINE_OPTIONS.map((lab, i) => (
-            <span key={lab} className="text-[.6rem] xl:text-base">
-              {lab}{i === ENGINE_OPTIONS.length - 1 ? "" : "-"}
-            </span>
+            // <span key={lab} className="text-[.6rem] xl:text-base">
+            //   {lab}{i === ENGINE_OPTIONS.length - 1 ? "" : "-"}
+            // </span>
+            <>
+            </>
           ))}
+          <span className="text-[.6rem] xl:text-xs font-bold">Min: 2665</span>
+          <span className="text-[.6rem] xl:text-xs font-bold">Max: 380/380</span>
         </div>
       </div>
 
       {/* Price Range */}
       <div className="pt-2">
         <h3 className="text-sm font-semibold text-white mb-4">Price Range</h3>
-        <div className="mb-2 text-gray-300 text-[.6rem] xl:text-sm">
-          ${safeRange[0]?.toLocaleString()} – ${safeRange[1]?.toLocaleString()}
-        </div>
         <Slider
           className="slider"
           value={safeRange}
@@ -674,12 +696,21 @@ export default function FilterCheckboxList({
           max={maxPrice}
           step={1000}
           renderTrack={(props, state) => (
-            <div {...props} className={`slider-track ${state.index === 0 ? "track-0" : "track-1"}`} />
+            <div
+              {...props}
+              className={`slider-track ${
+                state.index === 0 ? "track-0" : "track-1"
+              }`}
+            />
           )}
           renderThumb={(props) => <div {...props} className="slider-thumb" />}
         />
+        <div className="flex justify-between mt-3 text-gray-300">
+          {/* ${safeRange[0]?.toLocaleString()} – ${safeRange[1]?.toLocaleString()} */}
+          <span className="text-[.6rem] xl:text-xs font-bold">Min: 3,450,000</span>
+          <span className="text-[.6rem] xl:text-xs font-bold">Max: 75,000,000</span>
+        </div>
       </div>
     </div>
   );
 }
-

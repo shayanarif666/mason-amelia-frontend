@@ -105,7 +105,7 @@ const AboutPage = () => {
   return (
     <>
       <section
-        className="relative w-screen h-screen bg-[#10121A]"
+        className="md:sticky top-0 relative w-screen h-screen bg-[#10121A]"
         style={{
           backgroundImage: `linear-gradient(to right, rgb(21, 22, 28, ${media ? ".95" : "1"}) ${media? "100%" : "30%"}, rgba(0, 0, 0,0.3)), url(${bgPlane})`,
           backgroundSize: "cover", // <--- THIS
@@ -142,7 +142,7 @@ const AboutPage = () => {
           <div className="absolute top-0 left-0 w-full h-full bg-black opacity-80 z-[-1]"></div>
           <Timeline data={data} />
         </section>
-        <section className="py-20">
+        <section className="py-20 relative bg-[#111218]">
           <div className="container px-5">
             <WhyChoosUs />
           </div>

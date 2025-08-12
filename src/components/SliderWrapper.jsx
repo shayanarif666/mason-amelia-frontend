@@ -55,7 +55,7 @@ const SliderWrapper = () => {
 
   return (
     <>
-      <section className="relative z-[0] w-screen py-40 overflow-x-hidden">
+      <section className="h-screen relative z-[0] w-screen py-40 overflow-x-hidden">
         <div className="absolute w-screen top-0 left-0 h-full">
           <div className="absolute w-screen h-full bg-black opacity-80 md:opacity-50 z-[10]"></div>
           <Swiper
@@ -132,7 +132,7 @@ const SliderWrapper = () => {
                 initial={{ opacity: 0, y: 80 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
-                className="text-sm md:text-lg max-w-5xl text-white font-light mx-auto text-center pt-4 pb-8"
+                className="text-sm md:text-lg max-w-5xl text-white font-light mx-auto text-center py-[40px]"
               >
                 At Mason Amelia, we curate bespoke aviation experiences with
                 precision, trust, and performance at the core. From consultation

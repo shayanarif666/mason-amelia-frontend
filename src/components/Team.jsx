@@ -129,7 +129,7 @@ const TeamSection = () => {
             <div
               className={`lg:w-[30%] xl:w-[50%] glass-container md:mb-0 mb-4 lg:min-h-[375px] flex items-center`}
               style={{
-                borderRadius: "20px",
+                borderRadius: "0px",
                 boxShadow:
                   "0 6px 6px rgba(0, 0, 0, 0.02), 0 0 20px rgba(0, 0, 0, 0.1);",
                 height: "100%",
@@ -184,7 +184,7 @@ const TeamSection = () => {
                 <Button buttonLabel="View" onClick={`/team/2`} />
               </div> */}
                   <div className="absolute bottom-0 left-0 right-0 rounded-[100px] h-[180px] lg:h-[120px] group-hover:h-[185px] transition-all duration-500">
-                    <div className="glass-container rounded-xl flex items-center justify-center glass-container--rounded px-4 py-3">
+                    <div className="glass-container rounded-xl flex items-center justify-center glass-container--rounded px-4 py-3" style={{ borderRadius: "0" }}>
                       <div className="glass-filter"></div>
                       <div className="glass-overlay"></div>
                       <div className="glass-specular"></div>
@@ -245,7 +245,7 @@ const TeamSection = () => {
                 <Button buttonLabel="View" onClick={`/team/2`} />
               </div> */}
               <div className="absolute bottom-0 left-0 right-0 rounded-[100px] h-[190px] md:h-[130px] lg:group-hover:h-[190px] transition-all duration-500">
-                <div className="glass-container rounded-xl flex items-center justify-center glass-container--rounded px-4 py-3">
+                <div className="glass-container flex items-center justify-center glass-container--rounded px-4 py-3" style={{ borderRadius: "0" }}>
                   <div className="glass-filter"></div>
                   <div className="glass-overlay"></div>
                   <div className="glass-specular"></div>
