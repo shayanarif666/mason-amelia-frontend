@@ -1,0 +1,94 @@
+.gallary_thumbnail .swiper {
+  position: "static" !important;
+}
+
+.gallary_thumbnail .swiper-button-prev:after {
+  color: white !important;
+  background-color: #222 !important;
+  width: 30px !important;
+  height: 30px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  font-size: 12px !important;
+  font-weight: bold !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: fixed !important;
+  top: 90vh;
+  transform: translateX(-2rem) !important;
+  overflow: visible;
+}
+.gallary_thumbnail .swiper-button-next:after {
+  color: white !important;
+  background-color: #222 !important;
+  width: 30px !important;
+  height: 30px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  font-size: 12px !important;
+  font-weight: bold !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: fixed !important;
+  top: 90vh;
+  transform: translateX(1rem) !important;
+  overflow: visible;
+}
+
+@media (min-width: 1850px) {
+  .gallary_thumbnail .swiper-button-prev:after {
+    left: calc(100vw - 80%) !important;
+  }
+  .gallary_thumbnail .swiper-button-next:after {
+    right: calc(100vw - 81%) !important;
+  }
+}
+@media (max-width: 1850px) {
+  .gallary_thumbnail .swiper-button-prev:after {
+    left: calc(100vw - 85%) !important;
+  }
+  .gallary_thumbnail .swiper-button-next:after {
+    right: calc(100vw - 86%) !important;
+  }
+}
+@media (max-width: 1600px) {
+  .gallary_thumbnail .swiper-button-prev:after {
+    left: calc(100vw - 88%) !important;
+  }
+  .gallary_thumbnail .swiper-button-next:after {
+    right: calc(100vw - 89%) !important;
+  }
+}
+@media (max-width: 1450px) {
+  .gallary_thumbnail .swiper-button-prev:after {
+    left: calc(100vw - 90%) !important;
+  }
+  .gallary_thumbnail .swiper-button-next:after {
+    right: calc(100vw - 91%) !important;
+  }
+}
+@media (max-width: 1350px) {
+  .gallary_thumbnail .swiper-button-prev:after {
+    left: calc(100vw - 93%) !important;
+  }
+  .gallary_thumbnail .swiper-button-next:after {
+    right: calc(100vw - 94%) !important;
+  }
+}
+@media (max-width: 767px) {
+  .gallary_thumbnail .swiper-button-prev, 
+  .gallary_thumbnail .swiper-button-next {
+    display: none;
+  }
+}
+
+#showroom .swiper-slide {
+  padding: 0 !important;
+}
+@media (max-width: 767px) {
+  #showroom .swiper-slide {
+    margin-right: 0 !important;
+  }
+}
